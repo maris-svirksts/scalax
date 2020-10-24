@@ -16,15 +16,15 @@ class StringOptionSpec extends Specification {
     }
 
     "return None if string consists of whitespace chars" in {
-      StringOption("\t\n\r ") mustEqual None
+      StringOption("\t\n\r ") must beNone
     }
 
     "return Some if nonempty string" in {
-      StringOption("nonempty") mustEqual Some("nonempty")
+      StringOption("nonempty") must beSome("nonempty")
     }
 
     "trim spaces if nonempty string" in {
-      StringOption("\t\nnonempty\r ") mustEqual Some("nonempty")
+      StringOption("\t\nnonempty\r ") must beSome("nonempty")
     }
   }
 }
