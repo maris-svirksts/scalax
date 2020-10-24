@@ -111,13 +111,6 @@ package object scalax {
     }
   }
 
-  implicit class RichEither[A, B](val self: Either[A, B]) extends AnyVal {
-    def toTry(implicit ev: A <:< Throwable): Try[B] = self match {
-      case Right(x) => Success(x)
-      case Left(x)  => Failure(ev(x))
-    }
-  }
-
   implicit class RichClass(val self: Class[_]) extends AnyVal {
     def simpleName: String = {
       val xs = self.getName.split("\\$")
