@@ -5,6 +5,7 @@ target
 .idea/
 *.iml
 *.ipr
+null
  
 # Mac
 .DS_Store
