@@ -2,10 +2,10 @@ package com.github.t3hnar.scalax.util
 
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.locks.ReentrantLock
-import scala.collection.concurrent.TrieMap
 
-import scala.concurrent.{ ExecutionContext, Future }
+import scala.collection.concurrent.TrieMap
 import scala.concurrent.duration._
+import scala.concurrent.{ExecutionContext, Future}
 
 /**
  * @author Yaroslav Klymko, Sergiy Prydatchenko

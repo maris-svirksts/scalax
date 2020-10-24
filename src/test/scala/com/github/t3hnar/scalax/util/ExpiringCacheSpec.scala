@@ -1,7 +1,8 @@
 package com.github.t3hnar.scalax.util
 
-import org.specs2.mutable.Specification
 import java.util.concurrent.TimeUnit
+
+import org.specs2.mutable.Specification
 import org.specs2.specification.Scope
 
 /**

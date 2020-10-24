@@ -1,6 +1,7 @@
 package com.github.t3hnar.scalax
 
 import org.specs2.mutable.Specification
+
 import scala.concurrent.duration._
 
 /**

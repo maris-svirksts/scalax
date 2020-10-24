@@ -1,7 +1,8 @@
 package com.github.t3hnar.scalax
 
 import org.specs2.mutable.Specification
-import scala.util.{ Failure, Success }
+
+import scala.util.{Failure, Success}
 
 class RichEitherSpec extends Specification {
   "Either.toTry" should {
