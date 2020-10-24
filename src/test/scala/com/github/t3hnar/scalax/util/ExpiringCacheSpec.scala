@@ -48,8 +48,8 @@ class ExpiringCacheSpec extends Specification {
 
   class ExpiringCacheScope extends Scope {
     var current = 0L
-    val cache = new ExpiringCache[Int, String](1, TimeUnit.MILLISECONDS, 5) {
-      override def currentMillis = current
+    val cache: ExpiringCache[Int, String] = new ExpiringCache[Int, String](1, TimeUnit.MILLISECONDS, 5) {
+      override def currentMillis: Long = current
     }
   }
 }

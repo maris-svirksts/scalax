@@ -16,7 +16,7 @@ class ExpiringCache[K, V](
   val queryOverflow: Int              = 1000,
   executionContext:  ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global) {
 
-  implicit val ec = executionContext
+  implicit val ec: ExecutionContext = executionContext
 
   def this(duration: FiniteDuration, queryOverflow: Int)(implicit ec: ExecutionContext) =
     this(duration.length, duration.unit, queryOverflow, ec)
@@ -40,7 +40,7 @@ class ExpiringCache[K, V](
 
   def remove(entry: K): Option[V] = map.remove(entry) map (_.value)
 
-  protected def currentMillis = System.currentTimeMillis()
+  protected def currentMillis: Long = System.currentTimeMillis()
 
   @volatile private[util] var queryCount = 0
 
@@ -63,8 +63,8 @@ class ExpiringCache[K, V](
     }
   }
 
-  protected lazy val durationMillis = unit.toMillis(duration)
-  protected def isExpired(timestamp: Long) =
+  protected lazy val durationMillis: Long = unit.toMillis(duration)
+  protected def isExpired(timestamp: Long): Boolean =
     (timestamp + durationMillis) <= currentMillis
 
   def cleanExpired(): Unit = {

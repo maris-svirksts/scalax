@@ -3,7 +3,7 @@ package com.github.t3hnar.scalax
 import org.specs2.mutable.Specification
 
 class RichSetMapSpec extends Specification {
-  val empty = Map[String, Set[Int]]()
+  val empty: Map[String, Set[Int]] = Map[String, Set[Int]]()
   "RichSetMap.getOrEmpty" should {
     "return an empty set if no found" in {
       empty.getOrEmpty("1") must beEmpty

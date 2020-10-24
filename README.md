@@ -76,7 +76,7 @@ Adds `withNameOpt` method additionally to default `withName`
 ### RichSet
 
 Adds `collate` method to set. `collate` tries to compare sets of items in detail
-and returns items which were added, updated (key relative) and deleted in `s2` regarding `s1`
+and returns items which were added, updated (key relative) and deleted in `s2` regarding `s1`.
 
 ```scala
   import com.github.t3hnar.scalax.RichSet

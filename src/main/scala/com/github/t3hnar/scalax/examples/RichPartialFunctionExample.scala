@@ -11,7 +11,7 @@ object RichPartialFunctionExample {
     case 1 => "1"
   }
 
-  val pf2 = pf1.filter(_ == 0)
+  val pf2: PartialFunction[Int, String] = pf1.filter(_ == 0)
 
   pf2.isDefinedAt(0) // true
   pf2.isDefinedAt(1) // false
